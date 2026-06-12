@@ -52,6 +52,36 @@ Once installed, the app keeps itself up to date automatically.
 
 ---
 
+## Installing on macOS
+
+> **Heads-up:** the macOS builds are **not yet Apple-notarized**, so on first launch
+> Gatekeeper blocks the app with a *“Antlas is damaged and can’t be opened”* or
+> *“unidentified developer”* message. This is expected and **does not mean the app is
+> harmful** — it's signed and its updates are cryptographically verified, it just hasn't
+> gone through Apple's notary service yet. Proper notarization is on the roadmap; until
+> then, one of the steps below gets you running.
+
+**Recommended — remove the quarantine flag (most reliable):**
+
+1. Open the downloaded `.dmg` and drag **Antlas** into your **Applications** folder.
+2. Open **Terminal** and run:
+   ```bash
+   xattr -dr com.apple.quarantine /Applications/Antlas.app
+   ```
+3. Launch **Antlas** normally from Launchpad or the Applications folder.
+
+**Alternative — right-click to open:**
+
+1. Drag **Antlas** into **Applications** as above.
+2. In Finder, **right-click** (or Control-click) `Antlas.app` → **Open**, then confirm
+   **Open** in the dialog. (On Apple Silicon this sometimes still shows “damaged” — if so,
+   use the Terminal command above.)
+
+You only need to do this **once**. After the first launch, the in-app updater keeps Antlas
+up to date automatically and no further workaround is needed.
+
+---
+
 <div align="center">
 
 Made by **[orbilyte](https://orbilyte.de)** · [orbilyte.de](https://orbilyte.de)
